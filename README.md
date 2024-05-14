@@ -53,3 +53,82 @@ Embedded software on e-scooters:
 - Software Agent controlling an e-scooter (emulating embedded software)
 - Running on port 5100 
  
+## (Manual) **Deployment** ##
+
+- To run the **account-service**:  
+	- Open a terminal
+	- change dir to the ``account-service`` directory
+	- type: ``npm start`` 
+
+	You should see: ``Account service up and running - listening on port 5050``
+
+- To run the **e-scooter-service**:  
+	- Open a terminal
+	- change dir to the ``escooter-service`` directory 
+	- type: ``npm start``
+
+	You should see: ``E-Scooter service up and running - listening on port 5060``
+
+- To run the **renting-service**:
+	- Open a terminal
+	- change dir to the ``renting-service`` directory 
+	- type: ``npm start`` 
+
+	You should see: ``Renting service up and running - listening on port 5070``
+
+- To run the **user-app**
+	- Open a terminal
+	- change dir to the ``user-app`` directory
+-- type: ``node app.js``
+
+	You should see: ``User app backend un and running at 5300``
+
+	To see the user app in action to register a new user, open the browswer and go to:  
+	
+	``http://localhost:5300/registration.html``  
+	
+	(try with a not existing user and with an existing user)
+
+
+- To run the **company-dashboard**
+	- Open a terminal
+	- change dire to the ``company-dashboard`` directory
+	- type: ``npm start``
+
+	You should see:``Company dashboard endpoint at 5200``
+
+	To see the dashboard, open a new browser window and go to:
+	
+	``http://localhost:5200/escooters-dashboard.html``
+
+	You should see a map (Cesena Campus)
+
+- To run the simple **e-scooter controlling agent**
+	- Open a terminal  
+	- change dir to the ``escooter-agent-simple`` directory
+	- type: ``npm start``
+
+For the demo we use the [Postman application](https://www.postman.com/) to directly interact with services, reproducing some use cases.  After running the application, upload the collection ``API-postman_collection.json`` available in the repo root.  The collection includes main API that can be used to emulate the case study.
+
+Proposed demo -- sequence of requests (included in the collection API) to be done:
+
+- get current users
+- add a new user
+- get again the list of users
+- add an escooter
+- get the list of escooters
+- get the state of an escooter
+- start a new rent
+- get the rent info
+- configure the agent to control the escooter
+- turn the scooter on
+- activate automode
+(check the map)
+- deactivate automode
+- turn the scooter off
+- end the rent 
+
+
+## (Automated) **Deployment** ##
+
+Docker can be used to automate the deployment. A full CI Environment  can be used to automate all the process.
