@@ -55,31 +55,43 @@ Embedded software on e-scooters:
  
 ## (Manual) **Deployment** ##
 
+- To clone the repository
+	- Open a terminal
+	- change dir to the directory where to store and run the demo
+	- type: ``git clone https://github.com/unibo-dtm-se/e-scooters-prototype.git``  
+	
+	You should see a new directory ``e-scooters-prototype``, including a subdirectory for each subsystem: ``account-service``, ``e-scooter-service``, ``renting-service``, ``user-app``,``company-dashboard``,``escooter-agent-simple``
+
+
 - To run the **account-service**:  
 	- Open a terminal
-	- change dir to the ``account-service`` directory
-	- type: ``npm start`` 
+	- change dir to ``account-service`` directory
+	- to install libraries first type: ``npm install``
+	- to run the service type: ``npm start`` 
 
 	You should see: ``Account service up and running - listening on port 5050``
 
 - To run the **e-scooter-service**:  
 	- Open a terminal
-	- change dir to the ``escooter-service`` directory 
-	- type: ``npm start``
+	- change dir to ``escooter-service`` directory 
+	- to install libraries first type: ``npm install``
+	- to run the service type: ``npm start``
 
 	You should see: ``E-Scooter service up and running - listening on port 5060``
 
 - To run the **renting-service**:
 	- Open a terminal
-	- change dir to the ``renting-service`` directory 
-	- type: ``npm start`` 
+	- change dir to ``renting-service`` directory 
+	- to install libraries first type: ``npm install``
+	- to run the service type: ``npm start``
 
 	You should see: ``Renting service up and running - listening on port 5070``
 
 - To run the **user-app**
 	- Open a terminal
-	- change dir to the ``user-app`` directory
--- type: ``node app.js``
+	- change dir to ``user-app`` directory  
+	- to install libraries first type: ``npm install``
+	- to run the web app backend type: ``npm start``
 
 	You should see: ``User app backend un and running at 5300``
 
@@ -92,8 +104,9 @@ Embedded software on e-scooters:
 
 - To run the **company-dashboard**
 	- Open a terminal
-	- change dire to the ``company-dashboard`` directory
-	- type: ``npm start``
+	- change dir to ``company-dashboard`` directory
+	- to install libraries first type: ``npm install``
+	- to run the web app backend type: ``npm start``
 
 	You should see:``Company dashboard endpoint at 5200``
 
@@ -105,8 +118,9 @@ Embedded software on e-scooters:
 
 - To run the simple **e-scooter controlling agent**
 	- Open a terminal  
-	- change dir to the ``escooter-agent-simple`` directory
-	- type: ``npm start``
+	- change dir to ``escooter-agent-simple`` directory
+	- to install libraries first type: ``npm install``
+	- to run the agent type: ``npm start``
 
 For the demo we use the [Postman application](https://www.postman.com/) to directly interact with services, reproducing some use cases.  After running the application, upload the collection ``API-postman_collection.json`` available in the repo root.  The collection includes main API that can be used to emulate the case study.
 
