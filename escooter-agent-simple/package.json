@@ -1,0 +1,18 @@
+{
+  "name": "escooter agent (simple)",
+  "version": "0.1.0",
+  "description": "DTM wrap-up project - escooter agent",
+  "main": "escooter-agent.js",
+  "scripts": {
+    "start": "node escooter-agent.js",
+    "test": "echo \"WARNING: no unit test specified\""
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "geolib": "^3.3.3",
+    "mongoose": "^5.13.14",
+    "nodemon": "^2.0.16"
+  }
+}
